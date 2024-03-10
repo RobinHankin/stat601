@@ -172,7 +172,8 @@ x <- seq(from=6.1,to=6.8,len=100)
 n <- length(d)
 SEM <- sd(d)/sqrt(n)
 plot(x,dnorm(x,mean=6.4,sd=SEM),xlab="sample mean",type="l",lwd=4)
-legend("topleft",lwd=c(4,14),col=c("black","gray"),legend=c("null hypothesis","pvalue"))
+legend("topleft",lwd=c(4,14),col=c("black","gray"),
+       legend=c("null hypothesis","pvalue"))
 text(mean(d),2,"observed sample mean")
 jj <- seq(from=mean(d),to=6.8,len=100)
 jj1 <- c(jj,rev(jj))
@@ -254,7 +255,8 @@ x <- seq(from=6.1,to=6.8,len=100)
 n <- length(d)
 SEM <- sd(d)/sqrt(n)
 plot(x,dnorm(x,mean=6.4,sd=SEM),xlab="sample mean",type="l",lwd=4)
-legend("topleft",lwd=c(4,14),col=c("black","gray"),legend=c("null hypothesis","pvalue"))
+legend("topleft",lwd=c(4,14),col=c("black","gray"),
+       legend=c("null hypothesis","pvalue"))
 text(mean(d),2,"observed sample mean")
 f <- function(x){
   jj <- c(x,rev(x))
@@ -401,7 +403,8 @@ null.  Visually:
 
 ```{r}
 x <- 0:100
-plot(x,dbinom(x,100,1/2),col=c(rep("black",59),rep("pink",42)),type="h",lwd=2,main="null distribution; observation=58")
+plot(x,dbinom(x,100,1/2),col=c(rep("black",59),rep("pink",42)),
+     type="h",lwd=2,main="null distribution; observation=58")
 legend("topleft",lty=1,lwd=2,col=c("pink","black"),
         legend=c("more extreme","distribution"))
 ```
